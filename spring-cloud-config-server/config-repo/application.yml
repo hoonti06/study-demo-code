@@ -1,0 +1,10 @@
+server:
+  port: 0
+
+
+encrypted:
+  # 비대칭 키
+  password: '{cipher}AQCULZQvbJ0uNR7O/k5mULNulNWtJHZ94zR3DJC/dz4ExPxrv/WePJmtkT+NE6CfBfzmwrY+9FyLmjiXzkkEEjHVCvKn4byX396AE6F0kkmk8byoKEC8Old8lBQeaOlfrpcD4CqeeatmZAje3nT1dBqJ2yqfTHmgOi7nbDKP8AzNWCStm5ZqjEHyNa0EUNtBWYacgvInCyQoZWmW6B1a3JKSk+M3R7J1mUL+Z0Uzk+ntjB0PyRNQA7bHMywV9FhuKyX50lQbbsXe5LFdzYIJFMPNTalgoicjEPWTkol53mJuHZibpcNM1rMJvdvzSA8tJbs3RUbpp4CqQKG4kqbmUwnxzZMbO2hcqUa3hEkQwnfQJxff44CrMOE3e0hUJCcLFiA='
+
+  # 대칭 키
+  # password : '{cipher}93912a660a7f3c04e811b5df9a3cf6e1f63850cdcd4aa092cf5a3f7e1662fab7'

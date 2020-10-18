@@ -1,0 +1,31 @@
+server:
+  port: 8888 # 구성 서버의 클라이언트가 구성 서버로부터 구성 데이터를 가져 올 때 사용되는 기본 포트 번호
+  
+spring:
+  profiles:
+    active:
+      - vault # vault를 사용하기 위해 해당 profile 속성을 추가해야 한다.
+      - git # git은 spring.profiles.active를 추가하지 않아도 된다.
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://localhost:10080/root/config-repo
+          order: 2
+#          default-label: sidework # branch명, uri에 분기를 따로 입력하지 않으면 해당 value로 가져온다.
+#          search-path: config, more* # Git root가 아닌 하위 경로
+#          username: root # Git repository 인증
+#          password: root! # Git repository 인증
+
+        vault:
+          host: localhost
+          port: 8200
+          scheme: http
+          order: 1
+      token: roottoken # git의 public repository 접근에는 필요 없지만, vault를 위해 필요하다.
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: root!

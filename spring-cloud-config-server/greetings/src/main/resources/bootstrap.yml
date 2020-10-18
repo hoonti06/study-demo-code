@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+
+  cloud:
+    config:
+      server:
+      token: roottoken # git의 public repository 접근에는 필요 없지만, vault를 위해 필요하다. bootstrap에 있어야 한다.

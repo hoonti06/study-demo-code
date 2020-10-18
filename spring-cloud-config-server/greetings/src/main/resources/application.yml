@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: greetings
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: root!
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

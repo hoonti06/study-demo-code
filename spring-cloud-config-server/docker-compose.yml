@@ -1,0 +1,42 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root!
+
+  repo-gogs:
+    image: gogs/gogs
+    ports:
+      - "10022:22" # ssh
+      - "10080:3000" # web
+    volumes:
+      - ./gogs:/data
+
+  repo-vault:
+    image: vault
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./vault/config:/vault/config
+      - ./vault/policies:/vault/policies
+      - ./vault/data:/vault/data
+    environment:
+      - VAULT_ADDR=http://0.0.0.0:8200
+      - VAULT_API_ADDR=http://0.0.0.0:8200
+      - VAULT_ADDRESS=http://0.0.0.0:8200
+    cap_add:
+      - IPC_LOCK
+    command: vault server -dev -dev-root-token-id=roottoken -dev-listen-address="0.0.0.0:8200"
+
+  message-broker:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672" # rabbitmq
+      - "15672:15672" # rabitmq monitoring web server
+    restart: unless-stopped
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=root!
