@@ -1,0 +1,124 @@
+ifndef::snippets[]
+:snippets: ../../../target/generated-snippets
+endif::[]
+= API Document
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+:docinfo: shared-head
+
+[[introduction]]
+== 소개
+
+사람 API
+
+[[common]]
+== 공통 사항
+
+API에 관계없이 아래 사항을 지켜주셔야 합니다.
+
+=== Domain
+
+|===
+| 환경 | Domain
+
+| 개발서버
+| `http://localhost:8080/`
+|===
+
+=== Common Response
+
+include::{snippets}/common/custom-response-fields.adoc[]
+
+include::{snippets}/common/custom-response-fields-apiResponseCodes.adoc[]
+
+&#160;
+
+== 유저 API
+
+[[user-signup-V1]]
+=== 가입 Ver.1
+
+==== Request
+
+include::{snippets}/users-signup-v1/request-fields.adoc[]
+
+===== Request HTTP Example
+
+include::{snippets}/users-signup-v1/http-request.adoc[]
+
+==== Response
+
+include::{snippets}/users-signup-v1/response-fields-data.adoc[]
+
+===== Response HTTP Example
+
+include::{snippets}/users-signup-v1/http-response.adoc[]
+
+&#160;
+
+
+[[users-find-all]]
+=== 다건 조회
+
+==== Request
+
+===== Request HTTP Example
+
+include::{snippets}/users-find-all/http-request.adoc[]
+
+==== Response
+
+include::{snippets}/users-find-all/response-fields-data.adoc[]
+
+===== Response HTTP Example:
+
+include::{snippets}/users-find-all/http-response.adoc[]
+
+&#160;
+
+[[users-find]]
+=== 단건 조회
+
+==== Request
+
+include::{snippets}/users-find/path-parameters.adoc[]
+
+===== Request HTTP Example
+
+include::{snippets}/users-find/http-request.adoc[]
+
+==== Response
+
+include::{snippets}/users-find/response-fields-data.adoc[]
+
+===== Response HTTP Example:
+
+include::{snippets}/users-find/http-response.adoc[]
+
+&#160;
+
+[[users-update-V1]]
+=== 수정 Ver.1
+
+==== Request
+
+include::{snippets}/users-update-v1/path-parameters.adoc[]
+
+include::{snippets}/users-update-V1/request-fields.adoc[]
+
+===== Request HTTP Example
+
+include::{snippets}/users-update-V1/http-request.adoc[]
+
+==== Response
+
+include::{snippets}/users-update-V1/response-fields-data.adoc[]
+
+===== Response HTTP Example:
+
+include::{snippets}/users-update-V1/http-response.adoc[]
+
