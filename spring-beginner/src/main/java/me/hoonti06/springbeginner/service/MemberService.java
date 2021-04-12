@@ -3,14 +3,17 @@ package me.hoonti06.springbeginner.service;
 import me.hoonti06.springbeginner.domain.Member;
 import me.hoonti06.springbeginner.repository.MemberRepository;
 import me.hoonti06.springbeginner.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
     private final MemberRepository memberRepository;
     // Dependency Injection (의존성 주입)
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
