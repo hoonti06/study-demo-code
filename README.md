@@ -1,4 +1,7 @@
-# Spring React Login
+# Spring React Google Login
+
+[The-Tech-Tutor/spring-react-login](https://github.com/The-Tech-Tutor/spring-react-login )를 clone하여 일부를 수정함
+- MongoDB를 JPA 대체
 
 ## Setting up Gmail Login
 
