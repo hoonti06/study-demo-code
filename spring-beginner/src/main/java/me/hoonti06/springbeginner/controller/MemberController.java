@@ -10,7 +10,7 @@ public class MemberController {
     private final MemberService memberService;
 
     @Autowired
-    public MemberController(MemberService memberservice) {
-        this.memberService = memberservice;
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
     }
 }
