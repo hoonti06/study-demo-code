@@ -3,6 +3,8 @@
 [The-Tech-Tutor/spring-react-login](https://github.com/The-Tech-Tutor/spring-react-login )를 clone하여 일부를 수정함
 - MongoDB를 JPA 대체
 
+[youtube 영상](https://www.youtube.com/watch?v=HV-9EIU9JVY&t=246s)
+
 ## Setting up Gmail Login
 
 https://console.cloud.google.com/apis/credentials
