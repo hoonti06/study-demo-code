@@ -23,7 +23,7 @@ public class TokenProvider {
         Date expiryDate = new Date(now.getTime() + appConfig.getTokenExpirationMsec());
 
         return Jwts.builder()
-                .setSubject((userPrincipal.getId()))
+                .setSubject(userPrincipal.getUsername())
                 .setIssuedAt(new Date())
                 .setExpiration(expiryDate)
                 .signWith(SignatureAlgorithm.HS512, appConfig.getTokenSecret())
